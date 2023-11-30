@@ -1,38 +1,54 @@
-.App {
+.App{
+  border: 2px solid grey;
+  width: 950px;
+  background-color: #007bff;
+  display:center;
+}
+.price-card {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: start;
+  width: 250px;
+  height: 450px;
+  margin: 10px;
+  background-color: white;
+  display:inline-table;
+  
+ 
+}
+
+.plan {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
   text-align: center;
+  color: lightgray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.price {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  text-align: center;
+  border-bottom:1px solid lightgrey;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.features {
+  list-style-type: none;
+  padding: 1px;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.features li {
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buy-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  width: 180px;
+  cursor: pointer;
 }

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'
+import PriceCard from './components/pricecard'
 
 function App() {
+  const priceCardData = [
+    {
+      plan: 'FREE',
+      price:'0/month',
+      features: ['✔	Single User','✔	50GB Storage','✔ Unlimited Public Projects','✔ Community Access','𐄂 Unlimited Private Projects','𐄂 Dedicated Phone Support','𐄂 Free Subdomain','𐄂	Monthly Status Reports'],
+    },
+    {
+      plan: 'PLUS',
+      price:'9/month',
+      features: ['✔	5 Users','✔	50GB Storage', '✔	Unlimited Public Projects','✔	Community Access','✔	Unlimited Private Projects','✔	Dedicated Phone Support','✔	Free Subdomain','𐄂	Monthly Status Reports'],
+    },
+    {
+      plan: 'PRO',
+      price:'49/month' ,
+      
+      features: ['✔	Unlimited Users','✔	50GB Storage', '✔	Unlimited Public Projects', '✔	Community Access','✔	Unlimited Private Projects','✔	Dedicated Phone Support','✔	Free Subdomain','✔	Monthly Status Reports'],
+    },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {priceCardData.map((data, index) => (
+        <PriceCard key={index} plan={data.plan} price={data.price} features={data.features} />
+      ))}
     </div>
   );
 }
